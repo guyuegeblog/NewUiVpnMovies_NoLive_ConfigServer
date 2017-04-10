@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/naviback"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/mingzhanjingxuan"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:background="#FFFFFF"
+        android:layout_marginBottom="8dp"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:text="热门网站"
+            android:textColor="@color/viptext"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+
+    <de.blinkt.openvpn.View.SelfListView
+        android:id="@+id/hot_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mingzhanjingxuan"
+        android:background="@color/menuback"
+        android:divider="@null">
+
+    </de.blinkt.openvpn.View.SelfListView>
+
+</RelativeLayout>

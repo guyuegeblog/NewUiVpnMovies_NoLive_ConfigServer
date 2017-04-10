@@ -1,0 +1,160 @@
+apply plugin: 'com.android.application'
+
+repositories {
+    jcenter()
+}
+
+android {
+    signingConfigs {
+        vpnvipversionjks {
+            keyAlias 'testvpns'
+            keyPassword '123456'
+            storeFile file('C:/WangXuDongQM/testvpns.jks')
+            storePassword '123456'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        applicationId "de.blinkt.openvpn.vpnmovies.vipvpn"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "4.75"
+        ndk { abiFilters "armeabi", "armeabi-v7a", "x86", "mips" }
+    }
+    sourceSets {
+        main {
+            assets.srcDirs = ['src/main/assets', 'ovpnlibs/assets']
+            jniLibs.srcDirs = ['ovpnlibs/jniLibs']
+            jni.srcDirs = [] //disable automatic ndk-build
+        }
+        ovpn3 {
+
+        }
+        debug {
+
+        }
+
+        release {
+
+        }
+    }
+    lintOptions {
+        enable 'BackButton', 'EasterEgg', 'StopShip', 'IconExpectedSize', 'GradleDynamicVersion', 'NewerVersionAvailable'
+        disable 'MissingTranslation'
+    }
+    productFlavors {
+        //ovpn3
+
+        /*
+        x86 {
+              versionCode Integer.parseInt("6" + defaultConfig.versionCode)
+              ndk {
+                  abiFilter "x86"
+              }
+          }
+
+          mips {
+              versionCode Integer.parseInt("4" + defaultConfig.versionCode)
+              ndk {
+                  abiFilter "mips"
+              }
+          }
+
+          armv7 {
+              versionCode Integer.parseInt("2" + defaultConfig.versionCode)
+              ndk {
+                 abiFilter "armeabi-v7a"
+              }
+          }
+
+          arm {
+              versionCode Integer.parseInt("1" + defaultConfig.versionCode)
+              ndk {
+                  abiFilter "armeabi"
+              }
+          }
+
+          fat
+          */
+    }
+    productFlavors {
+//        wypp50011 {}
+//        wypp50012 {}
+//        wypp50013 {}
+//        wypp50014 {}
+//        wypp50015 {}
+//        wypp50016 {}
+//        wypp50017 {}
+//        wypp50021 {}
+//        crzb10001 {}
+//        crzb10002 {}
+//        crzb10003 {}
+//        crzb10004 {}
+//        crzb10005 {}
+//        crzb10006 {}
+
+//        send20001 {}
+//        vpntest0000{}
+//        send50001 {}
+//        send50002 {}
+//        send50003 {}
+//        send50004 {}
+//        send50005 {}
+//        send50006 {}
+
+        send50009 {}
+//        send50010 {}
+//        send50011 {}
+//        send8001 {}
+//        send8002 {}
+//        send8003 {}
+        send60005 {}
+//          vpntest10001 {}
+        crzb20015 {}
+    }
+
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.vpnvipversionjks
+            minifyEnabled false
+        }
+        release {
+            signingConfig signingConfigs.vpnvipversionjks
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.0.0'
+    compile 'com.android.support:design:23.0.0'
+    compile 'com.android.support:cardview-v7:23.0.0'
+    compile 'com.android.support:recyclerview-v7:23.0.0'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.github.ybq:Android-SpinKit:1.0.1'
+    compile 'org.xutils:xutils:3.3.36'
+    compile 'com.github.bumptech.glide:glide:3.5.2'
+    compile 'com.youth.banner:banner:+'
+    //最新版本
+    compile 'org.apache.httpcomponents:httpcore:4.4.4'
+    compile 'uk.co.chrisjenx:calligraphy:2.2.0'
+    compile 'net.frakbot:jumpingbeans:1.3.0'
+    compile 'com.viewpagerindicator:library:2.4.1@aar'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.easing:library:1.0.1@aar'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.squareup.okio:okio:1.7.0'
+//    compile 'com.liulishuo.filedownloader:library:0.1.2'
+    //    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.5.1'
+    //    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.5.1'
+    //    compile 'tv.danmaku.ijk.media:ijkplayer-exo:0.5.1'
+}

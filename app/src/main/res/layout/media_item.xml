@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/table_item_image"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="150.0dip"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/table_item_mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/table_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/table_item_image"
+        android:layout_marginTop="2.0dip"
+        android:lines="1"
+        android:textColor="#ffa7a7a7"
+        android:textSize="12.0sp" />
+
+
+    <RelativeLayout
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@color/viptext"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:id="@+id/umeventid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+</RelativeLayout>

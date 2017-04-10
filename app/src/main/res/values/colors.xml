@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="shibanhui">#2F4F4F</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="chuntianlv">#4cd864</color>
+    <color name="bai">#FFFAF0</color>
+    <color name="live_yellow_color">#ffefc600</color>
+    <color name="linewhite">#DADADA</color>
+    <color name="chunbai">#DCDCDC</color>
+    <color name="viptext">#333333</color>
+    <color name="shenhong">#ff2e69</color>
+    <color name="danhuang">#dba000</color>
+    <color name="huise">#A9A9A9</color>
+    <color name="menuback">#000000</color>
+    <color name="shenlan">#00BFFF</color>
+    <color name="liu">#666666</color>
+    <color name="san">#333333</color>
+    <color name="zantext">#ff2f2f</color>
+    <color name="naviback">#F0F0F0</color>
+    <color name="lan">#18184246</color>
+    <color name="very_light_grey">#e4e7ed</color>
+    <color name="light_grey">#c4c9cc</color>
+    <color name="transparent">#00000000</color>
+    <color name="light_teal">#ff9bbbba</color>
+    <color name="juhuang">#ff6c24</color>ff0000
+
+    <color name="half_transparent">#4f000000</color>
+    <color name="webbg">#008B8B</color>
+
+    <color name="pay_price_color">#eb6877</color>
+    <color name="pay_type">#00c997</color>
+    <color name="pay_price_yuanjia">#ff0000</color>
+
+
+
+</resources>

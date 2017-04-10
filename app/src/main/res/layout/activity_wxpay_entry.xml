@@ -1,0 +1,516 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/qq_bg">
+
+        <ImageView
+            android:id="@+id/login"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/login" />
+
+
+        <ImageView
+            android:id="@+id/user_update"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/userupdate" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/linewxpay"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/bot"
+        android:background="@color/chunbai" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/linewxpay"
+        android:layout_below="@id/top"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginTop="-5dp">
+
+                <HorizontalScrollView
+                    android:id="@+id/imParent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/images"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/verticaltext"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_below="@id/imParent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/hot_circle_bg"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_zn"
+                    style="@style/fontstyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="5dp"
+                    android:singleLine="true"
+                    android:text="现在充值 即送上千个国外著名宅男网站你懂的~"
+                    android:textColor="#ff6c24"
+                    android:textSize="16sp" />
+
+                <de.blinkt.openvpn.View.ScrollTextView
+                    android:id="@+id/intro"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dip"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/zantext"
+                    android:textSize="15sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="3dp"
+                android:background="@mipmap/pay_bg"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/WXPay"
+                    android:layout_width="145dp"
+                    android:visibility="visible"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@mipmap/iv_wx" />
+
+
+                <ImageView
+                    android:id="@+id/ZhiFuBaoPay"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@mipmap/iv_zfb_select" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@mipmap/pay_select_bg"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="40dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/one"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:background="@mipmap/three_month"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="3"
+                                android:orientation="vertical">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_three_price"
+                                        style="@style/fontstyle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="10dp"
+                                        android:singleLine="true"
+                                        android:text="150元"
+                                        android:textColor="@color/pay_price_color"
+                                        android:textSize="18sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_three_type"
+                                        style="@style/fontstyle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_margin="5dp"
+                                        android:singleLine="true"
+                                        android:text="三个月"
+                                        android:textColor="@color/pay_type"
+                                        android:textSize="18sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/three_original_price"
+                                        style="@style/fontstyle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="-10dp"
+                                        android:singleLine="true"
+                                        android:text="(原价180元)"
+                                        android:textColor="@color/pay_price_yuanjia"
+                                        android:textSize="16sp" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1.2"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/fontstyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_margin="5dp"
+                                    android:singleLine="true"
+                                    android:text="点击选购"
+                                    android:textColor="@color/white"
+                                    android:textSize="15sp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <!--<LinearLayout-->
+                            <!--android:id="@+id/six"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_height="match_parent"-->
+                            <!--android:layout_margin="5dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:background="@mipmap/three_month"-->
+                            <!--android:orientation="vertical">-->
+
+                            <!--<LinearLayout-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="0dp"-->
+                                <!--android:layout_weight="3"-->
+                                <!--android:orientation="vertical">-->
+
+
+                                <!--<LinearLayout-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="0dp"-->
+                                    <!--android:layout_weight="1"-->
+                                    <!--android:gravity="center"-->
+                                    <!--android:orientation="vertical">-->
+
+                                    <!--<TextView-->
+                                        <!--android:id="@+id/tv_six_price"-->
+                                        <!--style="@style/fontstyle"-->
+                                        <!--android:layout_width="wrap_content"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:layout_gravity="center"-->
+                                        <!--android:layout_marginTop="10dp"-->
+                                        <!--android:singleLine="true"-->
+                                        <!--android:text="150元"-->
+                                        <!--android:textColor="@color/pay_price_color"-->
+                                        <!--android:textSize="18sp" />-->
+
+                                <!--</LinearLayout>-->
+
+                                <!--<LinearLayout-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="0dp"-->
+                                    <!--android:layout_weight="1"-->
+                                    <!--android:gravity="center"-->
+                                    <!--android:orientation="vertical">-->
+
+                                    <!--<TextView-->
+                                        <!--android:id="@+id/tv_six_type"-->
+                                        <!--style="@style/fontstyle"-->
+                                        <!--android:layout_width="wrap_content"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:layout_gravity="center_horizontal"-->
+                                        <!--android:layout_margin="5dp"-->
+                                        <!--android:singleLine="true"-->
+                                        <!--android:text="六个月"-->
+                                        <!--android:textColor="@color/pay_type"-->
+                                        <!--android:textSize="18sp" />-->
+
+                                <!--</LinearLayout>-->
+
+                                <!--<LinearLayout-->
+                                    <!--android:layout_width="match_parent"-->
+                                    <!--android:layout_height="0dp"-->
+                                    <!--android:layout_weight="1"-->
+                                    <!--android:gravity="center"-->
+                                    <!--android:orientation="vertical">-->
+
+                                    <!--<TextView-->
+                                        <!--android:id="@+id/six_original_price"-->
+                                        <!--style="@style/fontstyle"-->
+                                        <!--android:layout_width="wrap_content"-->
+                                        <!--android:layout_height="wrap_content"-->
+                                        <!--android:layout_gravity="center_horizontal"-->
+                                        <!--android:layout_marginTop="-10dp"-->
+                                        <!--android:singleLine="true"-->
+                                        <!--android:text="(原价150元)"-->
+                                        <!--android:textColor="@color/pay_price_yuanjia"-->
+                                        <!--android:textSize="16sp" />-->
+
+                                <!--</LinearLayout>-->
+
+
+                            <!--</LinearLayout>-->
+
+                            <!--<LinearLayout-->
+                                <!--android:layout_width="match_parent"-->
+                                <!--android:layout_height="0dp"-->
+                                <!--android:layout_weight="1.2"-->
+                                <!--android:gravity="center"-->
+                                <!--android:orientation="vertical">-->
+
+                                <!--<TextView-->
+                                    <!--style="@style/fontstyle"-->
+                                    <!--android:layout_width="wrap_content"-->
+                                    <!--android:layout_height="wrap_content"-->
+                                    <!--android:layout_gravity="center_horizontal"-->
+                                    <!--android:layout_margin="5dp"-->
+                                    <!--android:singleLine="true"-->
+                                    <!--android:text="点击选购"-->
+                                    <!--android:textColor="@color/white"-->
+                                    <!--android:textSize="15sp" />-->
+
+                            <!--</LinearLayout>-->
+
+
+                        <!--</LinearLayout>-->
+
+                        <LinearLayout
+                            android:id="@+id/year"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:background="@mipmap/three_month"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="3"
+                                android:orientation="vertical">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_year_price"
+                                        style="@style/fontstyle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="10dp"
+                                        android:singleLine="true"
+                                        android:text="365元"
+                                        android:textColor="@color/pay_price_color"
+                                        android:textSize="18sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_year_type"
+                                        style="@style/fontstyle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_margin="5dp"
+                                        android:singleLine="true"
+                                        android:text="一年"
+                                        android:textColor="@color/pay_type"
+                                        android:textSize="18sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/year_original_price"
+                                        style="@style/fontstyle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="-10dp"
+                                        android:singleLine="true"
+                                        android:text="(原价480元)"
+                                        android:textColor="@color/pay_price_yuanjia"
+                                        android:textSize="16sp" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1.2"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/fontstyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_margin="5dp"
+                                    android:singleLine="true"
+                                    android:text="点击选购"
+                                    android:textColor="@color/white"
+                                    android:textSize="15sp" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right">
+
+                    <TextView
+                        android:id="@+id/pay_price"
+                        style="@style/fontstyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="5dp"
+                        android:paddingRight="50dp"
+                        android:singleLine="true"
+                        android:text="66~"
+                        android:textColor="#ff6c24"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <!--底部-->
+    <include layout="@layout/activity_bottom" />
+
+</RelativeLayout>

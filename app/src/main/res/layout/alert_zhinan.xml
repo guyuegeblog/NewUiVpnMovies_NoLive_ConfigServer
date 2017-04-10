@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:layout_margin="20dp"
+    android:background="#000000"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="470dp"
+        android:background="@drawable/zhinanbg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_conn_content"
+            style="@style/fontstyle"
+            android:gravity="center|fill_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="-5dp"
+            android:text="观 影 指 南"
+            android:textColor="#ff6c24"
+            android:textSize="20sp" />
+
+        <TextView
+            style="@style/fontstyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-5dp"
+            android:text="请认真阅读观影指南"
+            android:textColor="#b7b7b7"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_content"
+            android:orientation="vertical">
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtContent_disclaimer"
+                    style="@style/fontstyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="6.0dip"
+                    android:padding="10dp"
+                    android:scrollbars="vertical"
+                    android:singleLine="false"
+                    android:text="@string/info"
+                    android:textColor="#4f5d73"
+                    android:textSize="15.0sp" />
+            </ScrollView>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp">
+
+
+            <Button
+                android:id="@+id/ok"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/btn_ok" />
+
+            <TextView
+                android:id="@+id/first_timer"
+                style="@style/fontstyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="100dp"
+                android:text="(10s)"
+                android:textColor="#ff6c24"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
